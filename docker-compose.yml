@@ -1,0 +1,14 @@
+version: "3"
+services:
+  tad:
+    image: postgres:latest
+    container_name: "product-ms"
+    environment:
+      - POSTGRES_DB=product-ms
+      - POSTGRES_USER=product-ms
+      - POSTGRES_PASSWORD=product-ms
+      - TZ=GMT
+    volumes:
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - 35433:5432
