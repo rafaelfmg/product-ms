@@ -3,6 +3,7 @@ package com.productms.domain.product;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
 import java.math.BigDecimal;
 
@@ -14,6 +15,7 @@ public class ProductDto {
     @NotEmpty
     private String description;
     @PositiveOrZero
+    @NotNull
     private BigDecimal price;
 
     public String getId() {
